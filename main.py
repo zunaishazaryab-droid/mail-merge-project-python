@@ -9,6 +9,7 @@ for name in names_list:
     name = name.strip()
     x = placeholder.replace("[name]", name)
     letter = open(f"./output/readytosend/{name}"+"_letter.docx",mode="w")
+    letter.write(x)
     letter.close()
     
     
