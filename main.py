@@ -1,4 +1,19 @@
 #TODO: Create a letter using starting_letter.docx 
+file = open("./input/letters/starting_letter.docx", "r")
+print(file)
+placeholder = file.readline()
+names_list = open("./input/names/invited_names.txt", "r")
+# names_list = names.readline()
+
+for name in names_list:
+    name = name.strip()
+    x = placeholder.replace("[name]", name)
+    letter = open(f"./output/readytosend/{name}"+"_letter.docx",mode="w")
+    letter.close()
+    
+    
+
+
 #for each name in invited_names.txt
 #Replace the [name] placeholder with the actual name.
 #Save the letters in the folder "ReadyToSend".
